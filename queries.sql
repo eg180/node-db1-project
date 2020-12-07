@@ -1,6 +1,8 @@
 -- Database Queries
 
 -- Find all customers with postal code 1010
+SELECT * FROM Customers
+WHERE PostalCode = "1010";
 
 12	Cactus Comidas para llevar	Patricio Simpson	Cerrito 333	Buenos Aires	1010	Argentina
 54	Océano Atlántico Ltda.	Yvonne Moncada	Ing. Gustavo Moncada 8585 Piso 20-A	Buenos Aires	1010	Argentina
@@ -8,9 +10,17 @@
 
 -- Find the phone number for the supplier with the id 11
 
+SELECT * FROM Customers
+WHERE CustomerID = "11";
+
+
 11	Bs Beverages	Victoria Ashworth	Fauntleroy Circus	London	EC2 5NT	UK
 
 -- List first 10 orders placed, sorted descending by the order date
+SELECT * FROM Customers
+ORDER BY CustomerID DESC
+LIMIT 10;
+
 
 1	Alfreds Futterkiste	Maria Anders	Obere Str. 57	Berlin	12209	Germany
 2	Ana Trujillo Emparedados y helados	Ana Trujillo	Avda. de la Constitución 2222	México D.F.	05021	Mexico
@@ -24,6 +34,9 @@
 10	Bottom-Dollar Marketse	Elizabeth Lincoln	23 Tsawassen Blvd.	Tsawassen	T2F 8M4	Canada
 
 -- Find all customers that live in London, Madrid, or Brazil
+SELECT * FROM Customers
+WHERE City = "London" or City = "Madrid" or Country = "Brazil";
+
 8	Bólido Comidas preparadas	Martín Sommer	C/ Araquil, 67	Madrid	28023	Spain
 15	Comércio Mineiro	Pedro Afonso	Av. dos Lusíadas, 23	São Paulo	05432-043	Brazil
 21	Familia Arquibaldo	Aria Cruz	Rua Orós, 92	São Paulo	05442-030	Brazil
